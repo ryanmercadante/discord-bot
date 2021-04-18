@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node server"
+  },
   "devDependencies": {
     "dotenv": "^8.2.0"
   },
