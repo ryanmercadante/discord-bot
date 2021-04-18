@@ -3,7 +3,9 @@ const cron = require('node-cron')
 const fetch = require('node-fetch')
 const Discord = require('discord.js')
 
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 
 const hook = new Discord.WebhookClient(
   process.env.WEBHOOK_ID,
