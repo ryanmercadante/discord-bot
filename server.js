@@ -44,10 +44,10 @@ client.on('ready', () => {
 client.on('message', (msg) => {
   if (msg.author.bot) return
 
-  if (msg.content === 'ping') {
+  if (msg.content === '$ping') {
     msg.reply('pong')
   }
-  if (msg.content.toLowerCase() === 'cheeks') {
+  if (msg.content.toLowerCase() === '$cheeks') {
     msg.reply('YEEKS')
   }
 
@@ -76,6 +76,17 @@ client.on('message', (msg) => {
         }
       }
     })
+  }
+
+  if (msg.content === '$help') {
+    msg.reply(`
+      Try out some of the following commands:
+        $ping
+        $cheeks
+        $inspire
+        $crypto:<crypto-name>  | Ex: $crypto:bitcoin
+        $help
+    `)
   }
 })
 
