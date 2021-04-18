@@ -14,6 +14,8 @@ const hook = new Discord.WebhookClient(
 
 const client = new Discord.Client()
 
+const PORT = process.env.PORT || 3000
+
 const sadWords = ['sad', 'depressed', 'unhappy', 'angry', 'lonely']
 const encouragements = [
   'Cheer up!',
@@ -89,7 +91,7 @@ cron.schedule('30 18 * * 4,7', () => {
 
 function keepAlive() {
   client.login(process.env.TOKEN)
-  server.listen(3000, () => {
+  server.listen(PORT, () => {
     console.log('Server is ready')
   })
 }
