@@ -85,7 +85,7 @@ server.all('/', (req, res) => {
   res.send('Scotts Bots is running!')
 })
 
-cron.schedule('40 18 * * 4,7', () => {
+cron.schedule('30 22 * * 4,7', () => {
   hook.send('@everyone 30 minutes until tots, get ready!')
 })
 
